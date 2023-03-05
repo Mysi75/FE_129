@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 40px auto;
+    background: rgb(235, 235, 235);
+}
+
+.tabs {
+    display: flex;
+    background: rgb(255, 225, 225);
+}
+
+.tab {
+    box-sizing: border-box;
+    padding: 20px;
+    margin:  0 5px;
+    cursor: pointer;
+    border-bottom: 3 px solid transparent;
+}
+
+.tab:hover {
+    border-bottom: 3 px solid #88be8b;
+    background: rgb(207, 255, 245);
+}
+
+.tabs .tab.active {
+    background: #fff;
+}
+
+.tabs__content {
+    position: relative;
+    height: 500px;
+}
+
+.content {
+    position: absolute;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 500px;
+   transition: widht 1.2s linear;
+   opacity: 0;
+   
+}
+
+.content p{
+    width: 1200px;
+}
+
+.tabs__content .content.active{
+    width: 100%;
+    opacity: 1;
+}
+
+.tooi-tip {
+    border-bottom: 1 px dotted #000;
+    background: rgba(255, 255, 0.341);
+    position: relative;
+}
+
+.tool-tip-element {
+    position: absolute;
+    padding: 5px;
+    border-radius: 5px;
+    max-width: 400px;
+    width: max-content;
+    background: rgba(255, 255, 0, 0.746);
+    top: 0;
+    left: 0;
+}
+
