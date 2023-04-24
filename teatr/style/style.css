@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Open Sans Condensed normal";
+    src: url(../fonts/OpenSans_Condensed-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans Condensed bold";
+    src: url(../fonts/OpenSans_Condensed-Bold.ttf);
+}
+
+@font-face{
+    font-family: "Open Sans Condensed Thin";
+    src: url(../fonts/OpenSans_Condensed-Light.ttf);
+}
+
+.gold{
+    color: #D1A954;
+}
+
+body {
+    background: #333333;
+    font-family: "Open Sans Condensed normal";
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.header {
+    background: url(../image/bg.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* width: 100%; */
+    position: relative;
+    /* height: 1045px; */
+    border: 1px solid transparent;
+}
+
+.contact_panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100%;
+    background: rgba(51, 51, 51, 0.75);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vert_text {
+    margin-top: auto;
+    /* margin-bottom: 40px; */
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+    /* transform-origin: 88px -22px; */
+    font-family: "Open Sans Condensed bold";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #c4c4c4;
+    width: 25px;
+}
+
+.line {
+    height: 80px;
+    width: 6px;
+    background: #c4c4c4;
+    margin-top: 40px;
+}
+
+.social {
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 86px;
+    flex-direction: column;
+    height: 174px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fb {
+    width: 15px;
+}
+
+.content {
+    max-width: 1110px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content.heading {
+    margin-top: 50px;
+    margin-bottom: 200px;
+}
+
+.top_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav,
+.nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    max-width: 824px;
+    width: 100%;
+}
+
+.nav li {
+    font-family: "Open Sans Condensed bold";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.phone {
+    font-family: "Open Sans Condensed bold";
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #d1a954;
+}
+
+.main_content {
+    width: 100%;
+    padding-right: 10px;
+    margin-top: 198px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.first-screen__text {
+    margin-bottom: 165px;
+    max-width: 540px;
+}
+
+.first-screen__text .title {
+    font-family: "Open Sans Condensed bold";
+    font-size: 64px;
+    line-height: 87px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.first-screen__text .text {
+    font-family: "Open Sans Condensed normal";
+    font-size: 14px;
+    line-height: 150%;
+    margin-top: 50px;
+}
+
+.first-screen__text .button_text {
+    display: block;
+    margin-top: 49px;
+    width: 160px;
+    height: 50px;
+    background: #eb5757;
+    font-family: "Open Sans Condensed bold";
+    font-size: 18px;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.main_content .afisha {
+    width: 370px;
+}
+
+.main_content .slider-content {
+    position: relative;
+    width: 100%;
+    height: 510px;
+}
+
+.main_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 350px;
+}
+
+.second_img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 9;
+    width: 350px;
+}
+
+.main_content .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.main_content .buttons .button {
+    width: 108px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main_content .buttons .button svg * {
+    fill: #fff;
+}
+
+.main_content .buttons .button span {
+    font-family: "Open Sans Condensed bold";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.main_content .buttons .button.disable * {
+    color: #c4c4c4;
+    fill: #c4c4c4;
+}
+
+.about_section {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+
+.content.about {
+    margin-top: 150px;
+}
+
+.content.about .title {
+    text-align: center;
+    font-family: "Open Sans Condensed Thin";
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 65px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.content.about .title::first-letter{
+    color: #D1A954;
+}
+
+.about_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.about_text{
+    max-width: 445px;
+    width: 100%;
+}
+
+.content.about h3{
+    font-family: "Open Sans Condensed bold";
+    font-size: 21px;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.about_text p{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+}
+
+.about_info{
+    max-width: 255px;
+    width: 100%;
+}
+
+.about_info .numbers{
+    margin-left: 0;
+}
+
+.about_info .numbers:last-child{
+    margin-top: 25px;
+}
+
+.numbers img{
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 15px;
+}
+
+.numbers p.text{
+    font-family: "Open Sans Condensed bold";
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+}
+
+
+.about_img img{
+    display: block;
+}
+
+.project_section{
+    max-width: 1920px;
+    width: 100%;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    margin: 0 auto;
+}
+
+.project_section .title{
+    font-family: "Open Sans Condensed Thin";
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 65px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 150px;
+}
+
+.project_section .project_slider{
+    display: flex;
+    margin-left: 150px;
+    margin-right: 0;
+    margin-top: 100px;
+    overflow: hidden;
+}
+
+.project_slider .slide{
+    position: relative;
+    width: 442px;
+    height: 550px;
+}
+
+.project_slider .slide .slide_masc{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(51, 51, 51, 0.65), rgba(51, 51, 51, 0.65));
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: .3s;
+}
+
+.project_slider .slide .slide_masc .slide_title{
+    font-family: 'Open Sans Condensed bold';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.project_slider .slide .slide_masc .slide_vert{
+    font-family: 'Open Sans Condensed bold';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+}
+
+.project_slider .slide .search{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: .3s;
+}
+
+.project_slider .slide .search .img_search{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #D1A954;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project_slider .slide:hover .search{
+    opacity: 1;
+}
+
+.project_slider .slide:hover .slide_masc{
+    opacity: 0;
+}
+
+/* Место под остальные стили */
+
+
+.footer{
+    border-top: 1px solid transparent;
+}
+
+.content.footer_cintainer{
+    margin-top: 80px;
+    margin-bottom: 30px;
+    color: #989898;
+}
+
+.line_footer{
+    border: 1px solid #989898;
+}
+
+.footer_text{
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    text-align: right;
+}
