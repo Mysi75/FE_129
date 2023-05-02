@@ -1,0 +1,32 @@
+.item{
+    max-width: 350px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #b1b1b1;
+}
+
+.image{
+    width: 100%;
+}
+
+.image img{
+    width: 100%;
+}
+
+.title{
+    font-size: 22px;
+}
+
+.rating{
+    font-size: 18px;
+    color: rgb(106, 106, 106);
+    font-weight: 600;
+    text-align: right;
+}
+
+.price{
+    font-size: 20px;
+    text-align-last: left;
+    font-weight: 700;
+    color: #424242;
+}
