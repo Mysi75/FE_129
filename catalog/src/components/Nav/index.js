@@ -1,6 +1,6 @@
  import { Link, Outlet } from "react-router-dom"
  import style from './Nav.module.css';
-import CartWidget from "../../pages/Cart/CartWidget";
+import CartWidget from "../../pages/Cart/components/CartWidget";
 
 
  const Nav = () => {

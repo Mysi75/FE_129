@@ -1,0 +1,22 @@
+.product__container {
+    max-width: 500px;
+  width: 100%;
+}
+
+.image {
+  width: 200px;
+height: 200px;
+}
+
+.title {
+    color: brown;
+    font-style: 18px;
+}
+
+.description {
+    font-style: 14px;
+}
+
+.rating {
+    font-style: 14px;
+}

@@ -1,6 +1,8 @@
  import { useEffect, useState } from "react";
  import ItemCart from "../../components/ItemCart";
  import style from './Catalog.module.css';
+ 
+ 
 
  const Catalog = () => {
     const [data, setData] = useState([]);

@@ -1,0 +1,14 @@
+.cart_container{
+    padding: 0 30px;
+}
+
+.cart {
+    list-style: none;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.item {
+    margin: 50px 60px;
+}
