@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "System",
+        "noImplicitAny": false,
+        "removeComments": false,
+        "preserveConstEnums": true,
+        "outFile": "./bundle/index.js",
+        "sourceMap": true,
+        
+    },
+    
+    "files": [
+        "index.ts"
+    ]
+}
+
