@@ -1,0 +1,20 @@
+.navbar {
+    padding: 20px;
+    width: 100%;
+    background: rgb(255, 80, 80)
+}
+
+.nav {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button {
+    padding: 10px;
+    border: 1 px solid rgba(0, 0, 0, .6);
+    border-radius: 5px;
+    background: transparent;
+
+}
