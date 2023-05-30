@@ -14,7 +14,6 @@ const firebaseConfig = {
     storageBucket: "my-organaize.appspot.com",
     messagingSenderId: "409550422333",
     appId: "1:409550422333:web:d3b32407d8305258c4c554",
-    //databaseURL: 'https://my-organaize-default-rtdb.europe-west1.firebasedatabase.app/'
 };
 
 // Initialize Firebase
