@@ -3,7 +3,7 @@ import { OrganizeActionTypes, OrganizeActions, ITask } from "../../type/organize
 import {child, get, set, ref, update} from "firebase/database";
 import { db } from "../../utils/dbConfig";
 
-export const  getOrganize = (uid: string | null | undefined) => {
+export const  getOrganize = (uId: string | null | undefined) => {
     return async (dispatch: Dispatch<OrganizeActions>) => {
         try {
             dispatch({type: OrganizeActionTypes.FETCH_ORGANIZE});
@@ -26,16 +26,16 @@ export const  getOrganize = (uid: string | null | undefined) => {
 }
 
 export const setOrganize = (
-    uid: string | null | undefined, 
+    uId: string | null | undefined, 
     task: ITask,
      name: string | null | undefined) => {
     return async (dispach: Dispatch<OrganizeActions>) => {
         try {
             dispach({type :OrganizeActionTypes.FETCH_ORGANIZE});
-            set(ref(db, `organize/${uid}`), {
-                id: uid,
+            set(ref(db, `organize/${uId}`), {
+                id: uId,
                 name: name,
-                tasks: task,
+                tasks: [task],
             });
             dispach({
                 type: OrganizeActionTypes.SET_ORGANIZE,
@@ -57,16 +57,16 @@ export const clearOrganize = () => {
 }
 
 export const editOrganize = (
-    uid: string | null | undefined,
+    uId: string | null | undefined,
     task: ITask)  => {
         return async (dispatch: Dispatch<OrganizeActions>) => {
-            dispatch({type: OrganizeActionTypes.CLEAR_ORGANIZE});
+            dispatch({type: OrganizeActionTypes.FETCH_ORGANIZE});
             try {
-                const response = await get(child(ref(db), `organize/ $(uid)`));
+                const response = await get(child(ref(db), `organize/ $(uId)`));
                 if(response.exists()){
-                    const oldTask = response.val();
-                    oldTask.task = [...oldTask.task, task];
-                    await update(ref(db, 'organize/${uid'), oldTask)
+                    const oldTasc = response.val();
+                    oldTasc.tasks = [...oldTasc.tasks, task];
+                    await update(ref(db, 'organize/${uId'), oldTasc)
                     dispatch({type: OrganizeActionTypes.EDIT_TASK, payload: 'Данные обновлены'});
                 }else{
                     throw new Error();

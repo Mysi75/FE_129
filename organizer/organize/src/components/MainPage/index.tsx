@@ -2,13 +2,9 @@ import React, { useState, FormEvent ,useEffect} from "react";
 import { auth } from "../../utils/dbConfig";
 import { GoogleAuthProvider, User, signInWithPopup } from "firebase/auth";
 import { useActions } from "../../hooks/useActions";
-import { useTypeSelector } from "../../hooks/useTypeselector";
+import { useTypeSelector } from "../../hooks/useTypeSelector";
 import {useNavigate} from 'react-router';
 import { routes } from '../../utils/routes';
-
-
-
-
 
 
 const MainPage: React.FC = () => {

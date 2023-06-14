@@ -1,5 +1,5 @@
 export enum routes {
-    mail = '/',
+    main = '/',
     taskList = '/task',
     addTask = '/addTask',
     edit = '/edit'
