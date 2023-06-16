@@ -7,7 +7,7 @@ export const  getOrganize = (uId: string | null | undefined) => {
     return async (dispatch: Dispatch<OrganizeActions>) => {
         try {
             dispatch({type: OrganizeActionTypes.FETCH_ORGANIZE});
-            const response = await get(child(ref(db), `organize/ $(uid)`));
+            const response = await get(child(ref(db), `organize/$(uId)`));
             if (response.exists()){
                 dispatch({
                     type:OrganizeActionTypes.GET_ORGANIZE,
@@ -62,11 +62,11 @@ export const editOrganize = (
         return async (dispatch: Dispatch<OrganizeActions>) => {
             dispatch({type: OrganizeActionTypes.FETCH_ORGANIZE});
             try {
-                const response = await get(child(ref(db), `organize/ $(uId)`));
+                const response = await get(child(ref(db),`organize/$(uId)`));
                 if(response.exists()){
                     const oldTasc = response.val();
                     oldTasc.tasks = [...oldTasc.tasks, task];
-                    await update(ref(db, 'organize/${uId'), oldTasc)
+                    await update(ref(db, `organize/${uId}`), oldTasc);
                     dispatch({type: OrganizeActionTypes.EDIT_TASK, payload: 'Данные обновлены'});
                 }else{
                     throw new Error();
